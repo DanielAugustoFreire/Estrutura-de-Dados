@@ -85,10 +85,7 @@ int pop(NO__PILHA__PTR *TopPtr){
 }
 
 int isEmpty(NO__PILHA__PTR TopPtr){
-	if(TopPtr == NULL)
-		return 1;
-	else 
-		return 0;
+	return TopPtr == NULL;
 }
 
 void printar__no(NO__PILHA__PTR TopPtr){
