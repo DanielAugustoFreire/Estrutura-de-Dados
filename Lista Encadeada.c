@@ -11,6 +11,8 @@ typedef struct{
 	int tam;
 }Lista;
 
+void criar__lista(Lista *lista);
+
 void criar__lista(Lista *lista){
 	lista->inicio = NULL;
 	lista->tam = 0;
