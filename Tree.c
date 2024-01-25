@@ -31,13 +31,13 @@ void InsertNode(TREE__NODE__PTR *TreePtr, int value){
 			if(value > (*TreePtr)->data)
 				InsertNode(&((*TreePtr)->RightPtr), value);
 			else
-				printf("Dup");
+				printf(" Dup ");
 		}
 	}
 }
 void preOrder(TREE__NODE__PTR TreePtr){
 	if(TreePtr != NULL){
-		printf("%3d", TreePtr->data);
+		printf("   %3d   ", TreePtr->data);
 		preOrder(TreePtr->LeftPtr);
 		preOrder(TreePtr->RightPtr);
 	}
@@ -46,7 +46,7 @@ void preOrder(TREE__NODE__PTR TreePtr){
 void inOrder(TREE__NODE__PTR TreePtr){
 	if(TreePtr != NULL){
 		inOrder(TreePtr->LeftPtr);
-		printf("%3d", TreePtr->data);
+		printf("   %3d   ", TreePtr->data);
 		inOrder(TreePtr->RightPtr);
 	}
 }
@@ -55,7 +55,7 @@ void postOrder(TREE__NODE__PTR TreePtr){
 	if(TreePtr != NULL){
 		postOrder(TreePtr->LeftPtr);
 		postOrder(TreePtr->RightPtr);
-		printf("%3d", TreePtr->data);
+		printf("   %3d   ", TreePtr->data);
 	}
 }
 
@@ -64,8 +64,8 @@ int main(){
 	TREE__NODE__PTR No_Principal = NULL;
 	srand(time(NULL));
 	for(i = 0; i <= 10; i++){
-		valor = rand() % 100;
-		printf("%3d", valor);
+		valor = rand() % 1000;
+		printf("   %3d   ", valor);
 		InsertNode(&No_Principal, valor);
 	}
 	printf(" \n\nO percurso com preOrder e:\n"); 
